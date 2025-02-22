@@ -87,9 +87,9 @@ $$
 
 Now the loss function can be written as
 
-$$
+```math
 f(z^I,z^B) = \frac{1-\lambda}{N_B}\sum_{i=1}^{N_B}\sum_{j=1}^4 \left[u(z^{B,j}_i)-g_j(x_i)\right]^2 + \frac{\lambda}{N_I}\sum_{i=1}^{N_I}  \left[\nabla^2 u(z^I_i) \right]^2
-$$
+```
 
 where the parameter $\lambda$ can be chosen such that for a fixed error, the "distance" of the approximation to the PDE solution is minimised [1].
 
