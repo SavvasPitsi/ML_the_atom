@@ -15,7 +15,7 @@ The architecture is a feed-forward deep neural network. Currently, all network i
 A simple application is to solve a 1D ordinary differential equation. Here we chose
 
 $$
-\hat{L}\, u = 0,
+\hat{L} u = 0,
 $$
 
 with
@@ -27,7 +27,7 @@ $$
 which has a known general solution
 
 $$
-u(x) = A\, e^{-x}
+u(x) = A e^{-x}
 $$
 
 I implement a network with a width of 5. The Adam optimiser is selected. An initial condition needs to be chosen to uniquely identify the ODE solution. 
@@ -36,7 +36,7 @@ $$
 u(0) = a
 $$
 
-Then, the network is fed a vector $\vec{x}\in R^N, \, x_i\in[0,1]$ and the loss function is recursively minimised.
+Then, the network is fed a vector $\vec{x}\in R^N,  x_i\in[0,1]$ and the loss function is recursively minimised.
 
 The loss function is written as
 
@@ -56,16 +56,16 @@ $$
 \nabla ^2 u(x,y) = 0
 $$
 
-This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in R^2 \, : x,y\in [0,1] $. 
+This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in R^2  : x,y\in [0,1] $. 
 
 We can write the boundary conditions as:
 
 $$
-u(\vec b_1) = g_1( x),\, u(\vec b_2) = g_2(x)
+u(\vec b_1) = g_1( x), u(\vec b_2) = g_2(x)
 $$
 
 $$
-u(\vec b_3) = g_3(x),\, u(\vec b_4) = g_4(x).
+u(\vec b_3) = g_3(x), u(\vec b_4) = g_4(x).
 $$
 
 where $\vec b_i$ denote the 4 boundaries
