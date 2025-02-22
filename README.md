@@ -72,7 +72,6 @@ where $\vec b_i$ denote the 4 boundaries
 
 $$
 \vec b_1 = \{(x, 0)\in R^2 : x\in [0,1] \}
-
 $$
 
 $$
@@ -87,7 +86,6 @@ $$
 \vec b_4 = \{(1, x)\in R^2 : x\in [0,1] \}
 $$
 
-and $\vec b_i(x_0)$ denotes a specific corresponding pair, e.g. $\vec b_3(0.5)= (0.5,1)$
 
 For this purpose, I select $N_I$ points in the interior of the domain and $N_B$ points on the boundaries, $N_B/4$ points on each of them. 
 
