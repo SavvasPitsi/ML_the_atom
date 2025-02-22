@@ -36,7 +36,7 @@ $$
 u(0) = a
 $$
 
-Then, the network is fed a vector $\vec{x}\in \real^N, \, x_i\in[0,1]$ and the loss function is recursively minimised.
+Then, the network is fed a vector $\vec{x}\in R^N, \, x_i\in[0,1]$ and the loss function is recursively minimised.
 
 The loss function is written as
 
@@ -56,7 +56,7 @@ $$
 \nabla ^2 u(x,y) = 0
 $$
 
-This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in \real^2 \, : x,y\in [0,1] $. 
+This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in R^2 \, : x,y\in [0,1] $. 
 
 We can write the boundary conditions as:
 
@@ -71,20 +71,20 @@ $$
 where $\vec b_i$ denote the 4 boundaries
 
 $$
-\vec b_1 = \{(x, 0)\in \real^2 : x\in [0,1] \}
+\vec b_1 = \{(x, 0)\in R^2 : x\in [0,1] \}
 
 $$
 
 $$
-\vec b_2 = \{(0, x)\in \real^2 : x\in [0,1] \}
+\vec b_2 = \{(0, x)\in R^2 : x\in [0,1] \}
 $$
 
 $$
-\vec b_3 = \{(x, 1)\in \real^2 : x\in [0,1] \}
+\vec b_3 = \{(x, 1)\in R^2 : x\in [0,1] \}
 $$
 
 $$
-\vec b_4 = \{(1, x)\in \real^2 : x\in [0,1] \}
+\vec b_4 = \{(1, x)\in R^2 : x\in [0,1] \}
 $$
 
 and $\vec b_i(x_0)$ denotes a specific corresponding pair, e.g. $\vec b_3(0.5)= (0.5,1)$
