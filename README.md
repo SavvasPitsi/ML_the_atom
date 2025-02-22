@@ -36,7 +36,7 @@ $$
 u(0) = a
 $$
 
-Then, the network is fed a vector $\vec{x}\in \reals^N, \, x_i\in[0,1]$ and the loss function is recursively minimised.
+Then, the network is fed a vector $\vec{x}\in \real^N, \, x_i\in[0,1]$ and the loss function is recursively minimised.
 
 The loss function is written as
 
@@ -56,22 +56,35 @@ $$
 \nabla ^2 u(x,y) = 0
 $$
 
-This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in \reals^2 \, : x,y\in [0,1] $. 
+This time we also need to specify the boundary conditions as well. In general, we need to specify 4 functions for the boundaries of the domain that we need to solve our equation in. In Cartesian coordinates , that is $(x,y)\in \real^2 \, : x,y\in [0,1] $. 
 
 We can write the boundary conditions as:
 
 $$
-u(\vec b_1) = g_1( x),\, u(\vec b_2) = g_2(x),\\ 
+u(\vec b_1) = g_1( x),\, u(\vec b_2) = g_2(x)
+$$
+
+$$
 u(\vec b_3) = g_3(x),\, u(\vec b_4) = g_4(x).
 $$
 
 where $\vec b_i$ denote the 4 boundaries
 
 $$
-\vec b_1 = \{(x, 0)\in \reals^2 : x\in [0,1] \}\\
-\vec b_2 = \{(0, x)\in \reals^2 : x\in [0,1] \}\\
-\vec b_3 = \{(x, 1)\in \reals^2 : x\in [0,1] \}\\
-\vec b_4 = \{(1, x)\in \reals^2 : x\in [0,1] \}
+\vec b_1 = \{(x, 0)\in \real^2 : x\in [0,1] \}
+
+$$
+
+$$
+\vec b_2 = \{(0, x)\in \real^2 : x\in [0,1] \}
+$$
+
+$$
+\vec b_3 = \{(x, 1)\in \real^2 : x\in [0,1] \}
+$$
+
+$$
+\vec b_4 = \{(1, x)\in \real^2 : x\in [0,1] \}
 $$
 
 and $\vec b_i(x_0)$ denotes a specific corresponding pair, e.g. $\vec b_3(0.5)= (0.5,1)$
@@ -81,7 +94,10 @@ For this purpose, I select $N_I$ points in the interior of the domain and $N_B$ 
 The points in the interior and on each of the boundaries are 
 
 $$
-z^I_i= (x_i,y_i),\quad i=1,\ldots,N_I \\
+z^I_i= (x_i,y_i),\quad i=1,\ldots,N_I 
+$$
+
+$$
 z^{B,j}_i = (x_i,y_i),\quad i=1,\ldots,N_B/4
 $$
 
@@ -93,7 +109,7 @@ f(z^I,z^B) = \frac{1-\lambda}{N_B}\sum_{i=1}^{N_B}\sum_{j=1}^4 \left[u(z^{B,j}_i
 
 where the parameter $\lambda$ can be chosen such that for a fixed error, the "distance" of the approximation to the PDE solution is minimised [1].
 
-Here the Adam optimiser is used, and a fixed width of 20 is selected.
+Here the Adam optimiser is used, and a fixed width of 20 is selected. 
 
 ## References
 
